@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Learning Vue JS</title>
+        <!-- development version, includes helpful console warnings -->
+        <link href="styles.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            
+            <h1>Events</h1>
+
+            <button v-on:click="add(1)">Add a year</button>
+            <button @click="subtract(1)">Subtract a year</button>
+            <button v-on:dblClick="add(10)">Add 10 years</button>
+            <button @dblClick="subtract(10)">Subtract 10 years</button>
+
+            <p>My age is {{age}}</p>
+
+            <div id="canvas" v-on:mousemove="updateXY">{{x}},{{y}}</div>
+
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html> 
