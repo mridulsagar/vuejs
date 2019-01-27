@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Learning Vue JS</title>
+        <!-- development version, includes helpful console warnings -->
+        <link href="styles.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            
+            <h1>List Rendering - Looping through lists</h1>
+            
+            <ul>
+                <li v-for="character in characters"> {{ character }} </li>
+            </ul>
+
+            <ul>
+                <li v-for="ninja in ninjas"> {{ninja}} </li>
+            </ul>
+
+            <ul>
+                <li v-for="ninja in ninjas"> {{ninja.name}} - {{ninja.age}} </li>
+            </ul>
+
+            <!-- we can also get index of the array.. Example below: -->
+            <ul>
+                <li v-for="(character, index) in characters"> {{ index }} . {{ character }} </li>
+            </ul>
+
+            <ul>
+                <li v-for="(ninja, index) in ninjas"> {{ index }} . {{ ninja.name }} - {{ ninja.age }}  </li>
+            </ul>
+
+
+            <!-- we can loop through data in what ever we want... Example below:  -->
+            <div v-for="(ninja, index) in ninjas">
+                <h3> {{ index }}. {{ ninja.name }} </h3>
+                <p> {{ ninja.age }} </p>
+            </div>
+
+            <!-- we can reduce div tag using template tag -->
+            <template v-for="(ninja, index) in ninjas">
+                <h3> {{ index }}. {{ ninja.name }} </h3>
+                <p> {{ ninja.age }} </p>
+            </template>
+
+
+
+
+
+            
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html> 
