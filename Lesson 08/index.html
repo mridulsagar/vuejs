@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Learning Vue JS</title>
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+            
+        <div id="vue-app">
+            
+            <h1>Computed Property</h1>
+
+            <button v-on:click="a++">Add to A</button>
+            <button v-on:click="b++">Add to B</button>
+
+            <p>A - {{ a }}</p>
+            <p>B - {{ b }}</p>
+
+            <p>Age + A = {{ addToA }}</p>
+            <p>Age + B = {{ addToB }}</p>
+
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
