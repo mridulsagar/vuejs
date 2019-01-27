@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Learning Vue JS</title>
+        <!-- development version, includes helpful console warnings -->
+        <link href="styles.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            
+            <h1>Dynamic CSS</h1>
+
+            <h2>Example 1</h2>
+
+            <!-- <div v-on:click="available = !available" v-bind:class={available:available}>
+                <span>Mridul</span>
+            </div> -->
+
+            
+            <h2>Example 2</h2>
+
+            <button v-on:click= "available = !available">Toggle Available</button>
+            <button v-on:click= "nearby = !nearby">Toggle nearby</button>
+
+            <div v-bind:class="compClasses">
+                    <span>Mridul</span>
+                </div> 
+
+
+            
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html> 
