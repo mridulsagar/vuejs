@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Learning Vue JS</title>
+        <!-- development version, includes helpful console warnings -->
+        <link href="styles.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            
+            <h1>Key Modifiers</h1>
+
+            <label>Name: </label>
+            <input type="text" v-on:keyup.enter="logName" />
+
+            <label>Age: </label>
+            <input type="number" v-on:keyup.alt.enter="logAge" />
+
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html> 
