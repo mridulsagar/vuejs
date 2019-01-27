@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Learning Vue JS</title>
+        <!-- development version, includes helpful console warnings -->
+        <link href="styles.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            
+            <h1>Conditional Rendering</h1>
+            
+            <button v-on:click="error = !error">Toggle Error</button>
+            <button v-on:click="success = !success">Toggle Success</button>
+
+           <!--  <p v-if="error">Error!</p>
+            <p v-if="success">Success!</p> -->
+
+            <p v-if="error">Error!</p>
+            <p v-else-if="success">Success!</p>
+
+            <!-- <p v-show="error">Error!</p>
+            <p v-show="success">Success!</p> -->
+            
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html> 
