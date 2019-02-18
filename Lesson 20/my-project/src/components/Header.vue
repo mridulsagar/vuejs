@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { bus } from "../main";
+
 export default {
   props: {
     title: {
@@ -20,7 +22,10 @@ export default {
       //this.title = "Vue Wizerds";
 
       // Now we do emmit for changing root value
-      this.$emit("changeTitle", "Vue Wizards");
+      //this.$emit("changeTitle", "Vue Wizards");
+
+      this.title = "Vue Wizards";
+      bus.$emit("titleChanged", "Vue Wizards");
     }
   }
 };
