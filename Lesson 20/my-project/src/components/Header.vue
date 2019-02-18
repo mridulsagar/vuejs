@@ -1,32 +1,35 @@
 <template>
-    <header>
-       <h1> {{ title }} </h1> 
-
-    </header>
-
+  <header>
+    <h1 v-on:click="changeTitle">{{ title }}</h1>
+  </header>
 </template>
 
 <script>
-
 export default {
+  props: {
+    title: {
+      type: String
+    }
+  },
   data() {
-    return {
-        title: 'Vue Ninjas'
+    return {};
+  },
+  methods: {
+    changeTitle() {
+      this.title = "Vue Wizerds";
     }
   }
-}
-
+};
 </script>
 
 <style scoped>
-
-header{
-    background: lightgreen;
-    padding: 10px;
+header {
+  background: lightgreen;
+  padding: 10px;
 }
 
-h1{
-    color:#222;
-    text-align: center;
+h1 {
+  color: #222;
+  text-align: center;
 }
 </style>

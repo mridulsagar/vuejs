@@ -1,14 +1,19 @@
 <template>
   <footer>
-    <p>{{copyright}}</p>
+    <p>{{copyright}} {{ title }}</p>
   </footer>
 </template>
 
 <script>
 export default {
+  props: {
+    title: {
+      type: String
+    }
+  },
   data() {
     return {
-      copyright: "Copyright 2019 Vue Ninjas"
+      copyright: "Copyright 2019"
     };
   }
 };
@@ -19,9 +24,9 @@ footer {
   background: #222;
   padding: 6px;
 }
-p{
-    color: lightgreen;
+p {
+  color: lightgreen;
 
-    text-align: center;
+  text-align: center;
 }
 </style>
