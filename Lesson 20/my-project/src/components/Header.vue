@@ -16,7 +16,11 @@ export default {
   },
   methods: {
     changeTitle() {
-      this.title = "Vue Wizerds";
+      // Local template change
+      //this.title = "Vue Wizerds";
+
+      // Now we do emmit for changing root value
+      this.$emit("changeTitle", "Vue Wizards");
     }
   }
 };
